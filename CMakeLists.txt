@@ -3,7 +3,8 @@ project(todolist)
 
 set(CMAKE_CXX_STANDARD 26)
 set(SOURCES
-  src/main.c++
+  src/todolist.c++
+  src/todolist.hpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES})
