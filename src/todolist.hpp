@@ -38,8 +38,17 @@ public:
 class Color
 {
 public:
-  void Red(std::string message);
-  void Green(std::string message);
-  void Yellow(std::string message);
-  void Blue(std::string message);
+  void Red(std::string message, bool isWithNewLine);
+  void Green(std::string message, bool isWithNewLine);
+  void Yellow(std::string message, bool isWithNewLine);
+  void Blue(std::string message, bool isWithNewLine);
+};
+
+class Terminal
+{
+public:
+  void Info(std::string message);
+  void Error(std::string message);
+  void Success(std::string message);
+  void Warning(std::string message);
 };

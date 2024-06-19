@@ -119,24 +119,80 @@ void RunLoop()
   }
 }
 
-void Color::Red(std::string message)
+void Color::Red(std::string message, bool isWithNewLine)
 {
-  std::cout << "\033[31m" << message << "\033[0m" << std::endl;
+  if (isWithNewLine)
+  {
+    std::cout << "\033[31m" << message << "\033[0m" << std::endl;
+  }
+  else
+  {
+    std::cout << "\033[31m" << message << "\033[0m";
+  }
 }
 
-void Color::Green(std::string message)
+void Color::Green(std::string message, bool isWithNewLine)
 {
-  std::cout << "\033[32m" << message << "\033[0m" << std::endl;
+  if (isWithNewLine)
+  {
+    std::cout << "\033[32m" << message << "\033[0m" << std::endl;
+  }
+  else
+  {
+    std::cout << "\033[32m" << message << "\033[0m";
+  }
 }
 
-void Color::Yellow(std::string message)
+void Color::Yellow(std::string message, bool isWithNewLine)
 {
-  std::cout << "\033[33m" << message << "\033[0m" << std::endl;
+  if (isWithNewLine)
+  {
+    std::cout << "\033[33m" << message << "\033[0m" << std::endl;
+  }
+  else
+  {
+    std::cout << "\033[33m" << message << "\033[0m";
+  }
 }
 
-void Color::Blue(std::string message)
+void Color::Blue(std::string message, bool isWithNewLine)
 {
-  std::cout << "\033[34m" << message << "\033[0m" << std::endl;
+  if (isWithNewLine)
+  {
+    std::cout << "\033[34m" << message << "\033[0m" << std::endl;
+  }
+  else
+  {
+    std::cout << "\033[34m" << message << "\033[0m";
+  }
+}
+
+void Terminal::Error(std::string message)
+{
+  Color color;
+  color.Red("ERROR: ", false);
+  std::cout << message << std::endl;
+}
+
+void Terminal::Warning(std::string message)
+{
+  Color color;
+  color.Yellow("WARNING: ", false);
+  std::cout << message << std::endl;
+}
+
+void Terminal::Info(std::string message)
+{
+  Color color;
+  color.Blue("INFO: ", false);
+  std::cout << message << std::endl;
+}
+
+void Terminal::Success(std::string message)
+{
+  Color color;
+  color.Green("SUCCESS: ", false);
+  std::cout << message << std::endl;
 }
 
 int main()
