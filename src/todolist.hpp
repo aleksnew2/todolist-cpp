@@ -15,7 +15,8 @@ public:
     this->description = description;
   }
 
-  bool operator==(const TODOElement& other) const {
+  bool operator==(const TODOElement &other) const
+  {
     return title == other.title;
   }
 };
@@ -32,4 +33,13 @@ public:
   void Remove(std::string title);
   void Help();
   void Clear();
+};
+
+class Color
+{
+public:
+  void Red(std::string message);
+  void Green(std::string message);
+  void Yellow(std::string message);
+  void Blue(std::string message);
 };

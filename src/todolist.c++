@@ -119,6 +119,26 @@ void RunLoop()
   }
 }
 
+void Color::Red(std::string message)
+{
+  std::cout << "\033[31m" << message << "\033[0m" << std::endl;
+}
+
+void Color::Green(std::string message)
+{
+  std::cout << "\033[32m" << message << "\033[0m" << std::endl;
+}
+
+void Color::Yellow(std::string message)
+{
+  std::cout << "\033[33m" << message << "\033[0m" << std::endl;
+}
+
+void Color::Blue(std::string message)
+{
+  std::cout << "\033[34m" << message << "\033[0m" << std::endl;
+}
+
 int main()
 {
   RunLoop();
