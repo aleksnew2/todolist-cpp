@@ -18,9 +18,9 @@ void ToDoList::OutputElement(TODOElement element)
   }
 }
 
-void ToDoList::OutputCommand(std::string title, std::string decription)
+void ToDoList::OutputCommand(std::string title, std::string description)
 {
-  auto message = std::format("- {}: {}", title, decription);
+  auto message = std::format("- {}: {}", title, description);
   std::cout << message << "\n";
 }
 
