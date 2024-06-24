@@ -20,8 +20,9 @@ void ToDoList::OutputElement(TODOElement element)
 
 void ToDoList::OutputCommand(std::string title, std::string description)
 {
+  Color color;
   auto message = std::format("/ # {}: {}", title, description);
-  std::cout << message << "\n";
+  color.Gray(message, true);
 }
 
 void ToDoList::OutputList()
