@@ -175,7 +175,7 @@ void Terminal::Error(std::string message, bool isWithNewLine)
   if (isWithNewLine)
     std::cout << message << std::endl;
   else
-    std::cout << message << std::endl;
+    std::cout << message;
 }
 
 void Terminal::Warning(std::string message, bool isWithNewLine)
@@ -186,7 +186,7 @@ void Terminal::Warning(std::string message, bool isWithNewLine)
   if (isWithNewLine)
     std::cout << message << std::endl;
   else
-    std::cout << message << std::endl;
+    std::cout << message;
 }
 
 void Terminal::Info(std::string message, bool isWithNewLine)
@@ -197,7 +197,7 @@ void Terminal::Info(std::string message, bool isWithNewLine)
   if (isWithNewLine)
     std::cout << message << std::endl;
   else
-    std::cout << message << std::endl;
+    std::cout << message;
 }
 
 void Terminal::Success(std::string message, bool isWithNewLine)
@@ -208,7 +208,7 @@ void Terminal::Success(std::string message, bool isWithNewLine)
   if (isWithNewLine)
     std::cout << message << std::endl;
   else
-    std::cout << message << std::endl;
+    std::cout << message;
 }
 
 int main()
