@@ -47,8 +47,8 @@ public:
 class Terminal
 {
 public:
-  void Info(std::string message);
-  void Error(std::string message);
-  void Success(std::string message);
-  void Warning(std::string message);
+  void Info(std::string message, bool isWithNewLine);
+  void Error(std::string message, bool isWithNewLine);
+  void Success(std::string message, bool isWithNewLine);
+  void Warning(std::string message, bool isWithNewLine);
 };

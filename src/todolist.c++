@@ -167,32 +167,48 @@ void Color::Blue(std::string message, bool isWithNewLine)
   }
 }
 
-void Terminal::Error(std::string message)
+void Terminal::Error(std::string message, bool isWithNewLine)
 {
   Color color;
   color.Red("ERROR: ", false);
-  std::cout << message << std::endl;
+
+  if (isWithNewLine)
+    std::cout << message << std::endl;
+  else
+    std::cout << message << std::endl;
 }
 
-void Terminal::Warning(std::string message)
+void Terminal::Warning(std::string message, bool isWithNewLine)
 {
   Color color;
   color.Yellow("WARNING: ", false);
-  std::cout << message << std::endl;
+
+  if (isWithNewLine)
+    std::cout << message << std::endl;
+  else
+    std::cout << message << std::endl;
 }
 
-void Terminal::Info(std::string message)
+void Terminal::Info(std::string message, bool isWithNewLine)
 {
   Color color;
   color.Blue("INFO: ", false);
-  std::cout << message << std::endl;
+
+  if (isWithNewLine)
+    std::cout << message << std::endl;
+  else
+    std::cout << message << std::endl;
 }
 
-void Terminal::Success(std::string message)
+void Terminal::Success(std::string message, bool isWithNewLine)
 {
   Color color;
   color.Green("SUCCESS: ", false);
-  std::cout << message << std::endl;
+
+  if (isWithNewLine)
+    std::cout << message << std::endl;
+  else
+    std::cout << message << std::endl;
 }
 
 int main()
