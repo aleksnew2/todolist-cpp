@@ -72,6 +72,8 @@ void RunLoop()
 
   while (true)
   {
+    Terminal terminal;
+
     std::println("Type `help` for commands.");
     std::print(">>> ");
 
@@ -102,12 +104,22 @@ void RunLoop()
     }
     else if (command == "remove")
     {
-      std::print("Type element's title, which you want to remove: ");
 
-      std::string inputTitle;
-      std::getline(std::cin, inputTitle);
+      if (td_list.list.empty())
+      {
+        terminal.Error("List is empty.", true);
+      }
+      else
+      {
+        std::print("Type element's title, which you want to remove: ");
 
-      td_list.Remove(inputTitle);
+        std::string inputTitle;
+        std::getline(std::cin, inputTitle);
+
+        td_list.Remove(inputTitle);
+
+        terminal.Success("Element removed.", true);
+      }
     }
     else if (command == "clear")
     {
@@ -115,7 +127,7 @@ void RunLoop()
     }
     else
     {
-      std::cout << "Wrong command: " << command << std::endl;
+      terminal.Error("Wrong command", true);
     }
   }
 }
