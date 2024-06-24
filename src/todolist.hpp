@@ -42,6 +42,7 @@ public:
   void Green(std::string message, bool isWithNewLine);
   void Yellow(std::string message, bool isWithNewLine);
   void Blue(std::string message, bool isWithNewLine);
+  void Gray(std::string message, bool isWithNewLine);
 };
 
 class Terminal

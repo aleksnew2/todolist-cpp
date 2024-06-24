@@ -167,6 +167,18 @@ void Color::Blue(std::string message, bool isWithNewLine)
   }
 }
 
+void Color::Gray(std::string message, bool isWithNewLine)
+{
+  if (isWithNewLine)
+  {
+    std::cout << "\033[90m" << message << "\033[0m" << std::endl;
+  }
+  else
+  {
+    std::cout << "\033[90m" << message << "\033[0m";
+  }
+}
+
 void Terminal::Error(std::string message, bool isWithNewLine)
 {
   Color color;
