@@ -37,7 +37,9 @@ void ToDoList::Add(TODOElement element)
 {
   if (element.description.empty())
   {
+    Terminal terminal;
     td_list.list.push_back(TODOElement(element.title));
+    terminal.Warning("You've created non-description TODO element", true);
   }
   else
   {
